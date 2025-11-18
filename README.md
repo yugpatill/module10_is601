@@ -1,13 +1,12 @@
-**Module 10 — Secure User Model, Pydantic Validation, Database Testing & Docker Deployment**
 
-This project extends a FastAPI application by implementing a secure user system, including a SQLAlchemy model, Pydantic validation, password hashing, and JWT authentication.
-It also includes database-backed integration tests, a full CI/CD pipeline, and automatic Docker image deployment.
+# Module 10 — Secure User Model, Pydantic Validation, Database Testing & Docker Deployment
 
+This project enhances a FastAPI application by implementing a secure user system using SQLAlchemy models, Pydantic validation, password hashing, and JWT authentication. It also includes unit tests, integration tests with PostgreSQL, and a full CI/CD pipeline that builds, scans, and deploys the Docker image to Docker Hub.
 
-**Running Tests Locally**
+## 🚀 Running Tests Locally
 
-1️⃣ Create and activate a virtual environment
-
+### 1️⃣ Create and activate a virtual environment
+```bash
 python3 -m venv venv
 source venv/bin/activate
 
@@ -15,7 +14,7 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
-3️⃣ Start Postgres
+3️⃣ Start PostgreSQL using Docker
 
 docker compose up -d
 
@@ -24,8 +23,18 @@ docker compose up -d
 pytest
 
 
-**Reflection**
+Docker Hub Repository:
+https://hub.docker.com/r/yugpatil/module10_is601
 
-This assignment helped me understand how to design secure backend systems using FastAPI and SQLAlchemy.
-I learned to implement password hashing, validation with Pydantic, and structure unit and integration tests that interact with a real database.
-The most challenging part was configuring Docker with Postgres and ensuring tests ran consistently both locally and in GitHub Actions.
+
+📝 Reflection
+
+This assignment helped me understand how to design secure backend systems with FastAPI and SQLAlchemy. I learned how to use password hashing, validate user input with Pydantic, and build both unit and integration tests using a real PostgreSQL database. The most challenging part was configuring Docker with PostgreSQL and ensuring the GitHub Actions workflow ran consistently.
+
+📸 Screenshots
+
+Screenshots for GitHub Actions, Docker Hub deployment, and test results are stored here:
+
+https://github.com/yugpatill/module10_is601/tree/main/screenshots
+
+---
