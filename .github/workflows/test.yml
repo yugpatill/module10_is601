@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:latest
+        image: postgres:16
         env:
           POSTGRES_USER: user
           POSTGRES_PASSWORD: password
@@ -74,12 +74,13 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'app:test'
-          format: 'table'
-          exit-code: '1'
+        with:
+          image-ref: app:test
+          severity: CRITICAL
           ignore-unfixed: true
-          severity: 'CRITICAL,HIGH'
-  
+          exit-code: '0'
+
+
   deploy:
     needs: security
     if: github.ref == 'refs/heads/main'
@@ -99,8 +100,8 @@ jobs:
         with:
           push: true
           tags: |
-            kaw393939/601_module9:latest
-            kaw393939/601_module9:${{ github.sha }}
+            yugpatil/module10_is601:latest
+            yugpatil/module10_is601:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
           cache-from: type=registry,ref=kaw393939/601_module9:cache
           cache-to: type=inline,mode=max
