@@ -74,7 +74,6 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-        with:
           image-ref: app:test
           severity: CRITICAL
           ignore-unfixed: true
