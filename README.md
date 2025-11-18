@@ -3,10 +3,10 @@
 
 This project enhances a FastAPI application by implementing a secure user system using SQLAlchemy models, Pydantic validation, password hashing, and JWT authentication. It also includes unit tests, integration tests with PostgreSQL, and a full CI/CD pipeline that builds, scans, and deploys the Docker image to Docker Hub.
 
-## 🚀 Running Tests Locally
+##  Running Tests Locally
 
 ### 1️⃣ Create and activate a virtual environment
-```bash
+
 python3 -m venv venv
 source venv/bin/activate
 
@@ -23,18 +23,16 @@ docker compose up -d
 pytest
 
 
-Docker Hub Repository:
+### Docker Hub Repository:
 https://hub.docker.com/r/yugpatil/module10_is601
 
 
-📝 Reflection
+### Reflection
 
 This assignment helped me understand how to design secure backend systems with FastAPI and SQLAlchemy. I learned how to use password hashing, validate user input with Pydantic, and build both unit and integration tests using a real PostgreSQL database. The most challenging part was configuring Docker with PostgreSQL and ensuring the GitHub Actions workflow ran consistently.
 
-📸 Screenshots
+### Screenshots
 
 Screenshots for GitHub Actions, Docker Hub deployment, and test results are stored here:
 
 https://github.com/yugpatill/module10_is601/tree/main/screenshots
-
----
